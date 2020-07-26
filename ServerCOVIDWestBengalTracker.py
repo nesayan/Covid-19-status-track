@@ -1,4 +1,4 @@
-from COVIDWestBengalTracker import state, stateIndex, stateValues
+from COVIDWestBengalTracker import url, state, stateIndex, stateValues
 from flask import Flask
 from twilio.twiml.messaging_response import MessagingResponse
   
@@ -17,7 +17,7 @@ def sendCOVIDStatus():
     index = stateIndex
     values = stateValues
     resp = MessagingResponse()
-    resp.message(f"State: {stateName}\n{index[0]}: {values[0]}\n{index[1]}: {values[1]}\n{index[2]}: {values[2]}\n{index[3]}: {values[3]}")
+    resp.message(f"COVID-19 STATS\nURL: {url}\nState: {stateName}\n{index[0]}: {values[0]}\n{index[1]}: {values[1]}\n{index[2]}: {values[2]}\n{index[3]}: {values[3]}")
     return str(resp)
 
 # main driver function 
