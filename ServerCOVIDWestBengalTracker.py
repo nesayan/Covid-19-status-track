@@ -11,7 +11,7 @@ def test():
     resp.message("Working!")
     return str(resp)
 
-@app.route('/track', methods= ['POST']) 
+@app.route('/track', methods= ['POST', 'GET']) 
 def sendCOVIDStatus(): 
     stateName = state
     index = stateIndex
